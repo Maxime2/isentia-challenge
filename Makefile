@@ -9,6 +9,9 @@ setup:
 	@createdb isentia
 	/usr/local/dpsearch/sbin/indexer -Ecreate ./indexer.conf
 	@psql isentia < create_news.sql
+	@sudo cp isentia.conf /etc/apache2/sites-available/
+	@sudo a2ensite isentia
+	@sudo service apache2 restart
 
 
 test:
