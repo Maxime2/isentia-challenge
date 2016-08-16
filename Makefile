@@ -4,6 +4,7 @@
 .PHONY: setup
 
 setup:
+	-@rm -rf var/
 	-@dropdb isentia
 	@createdb isentia
 	/usr/local/dpsearch/sbin/indexer -Ecreate ./indexer.conf
