@@ -1,7 +1,7 @@
 #
 
 
-.PHONY: setup
+.PHONY: setup test crawl
 
 setup:
 	-@rm -rf var/
